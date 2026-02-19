@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  prorok-bot:
+    build: .
+    container_name: prorok-tg-bot
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      # Пробрасываем папку с данными на хост
+      - ./bot_data:/app/data
+    networks:
+      - shared-network
+    # Добавляем healthcheck
+    healthcheck:
+      test: ["CMD", "python", "-c", "import os; exit(0) if os.path.exists('/app/data') else exit(1)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  shared-network:
+    external: true

@@ -1,0 +1,4 @@
+aiogram==3.17.0
+psycopg2-binary==2.9.10
+pytz==2024.2
+python-dotenv==1.0.1

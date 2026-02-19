@@ -1,0 +1,20 @@
+# Папка с данными
+bot_data/
+data/
+
+# Файлы с секретами
+.env
+*.env
+
+# Кэш Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Временные файлы
+*.log
+*.bak
+*.swp
+*.swo
