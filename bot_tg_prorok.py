@@ -51,10 +51,10 @@ DATA_DIR.mkdir(exist_ok=True, parents=True)
 logger.info(f"Директория для данных: {DATA_DIR}")
 
 # === ИЗМЕНЕНИЕ 3: Пути к файлам данных ===
-USERS_FILE = DATA_DIR / "users.json"
-CREATORS_FILE = DATA_DIR / "creators.json"
-BOOKINGS_FILE = DATA_DIR / "bookings.json"
-TIME_SLOTS_FILE = DATA_DIR / "time_slots.json"
+USERS_FILE = DATA_DIR / "users_prorok.json"
+CREATORS_FILE = DATA_DIR / "creators_prorok.json"
+BOOKINGS_FILE = DATA_DIR / "bookings_prorok.json"
+TIME_SLOTS_FILE = DATA_DIR / "time_slots_prorok.json"
 
 # Инициализация бота и диспетчера
 bot = Bot(token=BOT_TOKEN)
@@ -2130,4 +2130,5 @@ async def main():
         await bot.session.close()
 
 if __name__ == "__main__":
+
     asyncio.run(main())
